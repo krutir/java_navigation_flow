@@ -17,8 +17,15 @@ public class ViewPanel extends javax.swing.JPanel {
     /**
      * Creates new form FormPanel
      */
-    public ViewPanel() {
+    private user newUser;
+    public ViewPanel(user newUser) {
         initComponents();
+        this.newUser = newUser;
+        populateData();
+    }
+
+    ViewPanel() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -251,4 +258,12 @@ public class ViewPanel extends javax.swing.JPanel {
     private javax.swing.JLabel message_validation;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
+
+    private void populateData() {
+        firstNameTextField.setText(this.newUser.getFirstName());
+        lastNameTextField.setText(this.newUser.getLastName());
+        ageTextField.setText(this.newUser.getAge());
+        emailTextField.setText(this.newUser.getEmail());
+        messageTextField.setText(this.newUser.getMessage());
+    }
 }
