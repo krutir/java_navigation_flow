@@ -5,6 +5,7 @@
  */
 package model;
 
+import java.util.Date;
 import javax.swing.ImageIcon;
 
 /**
@@ -18,7 +19,16 @@ public class user {
     private String email;
     private String message;
     private ImageIcon pic;
+    private Date dob; 
 
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+    
     public ImageIcon getPic() {
             return pic;
     }
