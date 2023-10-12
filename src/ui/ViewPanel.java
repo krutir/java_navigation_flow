@@ -5,6 +5,7 @@
  */
 package ui;
 import java.util.regex.*;
+import javax.swing.ImageIcon;
 
 import javax.swing.JOptionPane;
 import model.user;
@@ -17,11 +18,13 @@ public class ViewPanel extends javax.swing.JPanel {
     /**
      * Creates new form FormPanel
      */
-    private user newUser;
-    public ViewPanel(user newUser) {
+    user newUser;
+    public ViewPanel(user newUser, ImageIcon uploadedImageIcon) {
         initComponents();
         this.newUser = newUser;
         populateData();
+        viewImageLabel.setIcon(uploadedImageIcon);
+
     }
 
     ViewPanel() {
@@ -53,6 +56,8 @@ public class ViewPanel extends javax.swing.JPanel {
         messageLabel = new javax.swing.JLabel();
         ageTextField = new javax.swing.JTextField();
         lName_validation = new javax.swing.JLabel();
+        uploadImageLabel = new javax.swing.JLabel();
+        viewImageLabel = new javax.swing.JLabel();
 
         firstName.setText("First Name:");
 
@@ -102,49 +107,62 @@ public class ViewPanel extends javax.swing.JPanel {
             }
         });
 
+        uploadImageLabel.setText("Upload Image:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(uploadImageLabel)
+                .addGap(44, 44, 44)
+                .addComponent(viewImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(353, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(132, 132, 132)
-                    .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(280, Short.MAX_VALUE))
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(106, 106, 106)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(age_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(firstName)
-                                .addComponent(ageLabel)
-                                .addComponent(emailLabel)
-                                .addComponent(lastNameLabel)
-                                .addComponent(messageLabel))
-                            .addGap(58, 58, 58)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(firstNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                                .addComponent(lastNameTextField)
-                                .addComponent(ageTextField)
-                                .addComponent(emailTextField)
-                                .addComponent(messageTextField))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGap(132, 132, 132)
+                            .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(106, 106, 106)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(age_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(email_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lName_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(fname_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(24, 24, 24)
-                                    .addComponent(message_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(firstName)
+                                        .addComponent(ageLabel)
+                                        .addComponent(emailLabel)
+                                        .addComponent(lastNameLabel)
+                                        .addComponent(messageLabel))
+                                    .addGap(58, 58, 58)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(firstNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                                        .addComponent(lastNameTextField)
+                                        .addComponent(ageTextField)
+                                        .addComponent(emailTextField)
+                                        .addComponent(messageTextField))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(email_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(lName_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(fname_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(24, 24, 24)
+                                            .addComponent(message_validation, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                     .addContainerGap(130, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(391, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(viewImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uploadImageLabel))
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(20, 20, 20)
@@ -257,6 +275,8 @@ public class ViewPanel extends javax.swing.JPanel {
     private javax.swing.JTextField messageTextField;
     private javax.swing.JLabel message_validation;
     private javax.swing.JLabel titleLabel;
+    private javax.swing.JLabel uploadImageLabel;
+    private javax.swing.JLabel viewImageLabel;
     // End of variables declaration//GEN-END:variables
 
     private void populateData() {
@@ -265,5 +285,7 @@ public class ViewPanel extends javax.swing.JPanel {
         ageTextField.setText(this.newUser.getAge());
         emailTextField.setText(this.newUser.getEmail());
         messageTextField.setText(this.newUser.getMessage());
+
+
     }
 }

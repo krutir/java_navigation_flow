@@ -76,6 +76,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         SplitPane.setTopComponent(topPanel);
 
+        bottomPanel.setPreferredSize(new java.awt.Dimension(700, 500));
         bottomPanel.setLayout(new java.awt.CardLayout());
         SplitPane.setRightComponent(bottomPanel);
 
@@ -87,7 +88,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
         );
 
         pack();

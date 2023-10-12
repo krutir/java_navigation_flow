@@ -16,54 +16,66 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="228" max="-2" attributes="0"/>
               <Component id="submitButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="389" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+              <Component id="uploadImageLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="uploadImageButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="imagePathLabel" min="-2" pref="187" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="316" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                  <Component id="titleLabel" min="-2" pref="288" max="-2" attributes="0"/>
-                  <EmptySpace pref="280" max="32767" attributes="0"/>
-              </Group>
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="age_validation" alignment="1" min="-2" pref="149" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="firstName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="emailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="messageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="firstNameTextField" alignment="0" pref="151" max="32767" attributes="0"/>
-                              <Component id="lastNameTextField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="ageTextField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="emailTextField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="messageTextField" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="titleLabel" min="-2" pref="288" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="age_validation" alignment="1" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="email_validation" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                      <Component id="lName_validation" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                      <Component id="fname_validation" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="firstName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="emailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="messageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="message_validation" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="firstNameTextField" alignment="0" pref="151" max="32767" attributes="0"/>
+                                      <Component id="lastNameTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ageTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="emailTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="messageTextField" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="email_validation" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                              <Component id="lName_validation" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                              <Component id="fname_validation" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                          <Component id="message_validation" min="-2" pref="149" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="278" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -71,7 +83,13 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="455" max="32767" attributes="0"/>
+              <EmptySpace pref="380" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uploadImageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="uploadImageButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="imagePathLabel" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Component id="submitButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -201,6 +219,21 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lName_validation">
+    </Component>
+    <Component class="javax.swing.JLabel" name="uploadImageLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upload Image:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="uploadImageButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upload"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uploadImageButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="imagePathLabel">
     </Component>
   </SubComponents>
 </Form>
